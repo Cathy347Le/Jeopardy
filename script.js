@@ -150,3 +150,36 @@ const answerTextEl = triviaCards.map(function(item) {
 const pointValueEl = triviaCards.map(function(item) {
   return item.pointValue;
 });
+
+//Capture items in my footer and text to it
+const triviaQuestionEl = document.querySelector("#trivia-question");
+// triviaQuestionEl.innerHTML += "I hope this works";
+// console.log(triviaQuestionEl);
+
+// for (let q = 0; q < questionTextEl.length; q++) {
+//   console.log(questionTextEl[q]);
+// }
+
+// for (let i = 0; i < cellsEl.length; i++) {
+//   cellsEl[i].addEventListener("click", function(evt) {
+//     triviaQuestionEl.innerHTML += questionTextEl;
+//   });
+// }
+
+for (let i = 0; i < cellsEl.length; i++) {
+  cellsEl[i].addEventListener("click", function(evt) {
+    for (let q = 0; q < questionTextEl.length; q++) {
+      if (i === q) {
+        triviaQuestionEl[q].innerHTML += questionTextEl;
+      }
+    }
+  });
+}
+
+// for (let i = 0; i < cellsEl.length; i++) {
+//     cellsEl[i].addEventListener("click", function (evt) {
+//         for (let q = 0; q < questionTextEl.length; q++) {
+//             triviaQuestionEl[q].innerHTML += questionTextEl;
+//         }
+
+// }
