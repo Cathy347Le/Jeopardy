@@ -1,3 +1,51 @@
-h1 {
+* {
+  box-sizing: border-box;
+}
+
+.grid-categories {
+  display: grid;
+  max-width: 950px;
+  min-height: 4.5rem;
+  margin: 0 auto;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
   text-align: center;
+  background-color: #c02738;
+}
+
+.category {
+  border: 5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4mm ridge rgb(243, 212, 8);
+  font-family: "Alfa Slab One", cursive;
+  font-size: 15px;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.grid-board-game {
+  display: grid;
+  max-width: 950px;
+  margin: 0 auto;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 500px;
+  background-color: #c02738;
+  text-align: center;
+}
+
+.board {
+  border: thick double #ffdf00;
+  /* border: 3px solid  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 30px;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
