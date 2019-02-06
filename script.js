@@ -130,3 +130,23 @@ var triviaCards = [
     pointValue: 500
   }
 ];
+
+//Capturing Elements
+var cellsEl = document.querySelectorAll(".cell-board");
+var answerButtonEl = document.querySelector("#answer-button");
+var correctButtonEl = document.querySelector("#correct-button");
+var wrongButtonEl = document.querySelector("#wrong-button");
+var continueButtonEl = document.querySelector("#continue-button");
+
+//Capturing properties in the trivia card array
+const questionTextEl = triviaCards.map(function(item) {
+  return item.question;
+});
+
+const answerTextEl = triviaCards.map(function(item) {
+  return item.answer;
+});
+
+const pointValueEl = triviaCards.map(function(item) {
+  return item.pointValue;
+});
