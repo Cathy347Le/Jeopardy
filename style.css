@@ -25,14 +25,14 @@
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
+/* 
 .aside {
   display: flex;
   flex-grow: 1;
-  /* max-width: 30px;
-  max-height: 30px; */
-  /* margin-left: auto; */
-}
+  max-width: 30px;
+  max-height: 30px;
+  margin-left: auto;
+} */
 .grid-board-game {
   display: grid;
   max-width: 950px;
@@ -46,7 +46,6 @@
 
 .board {
   border: thick double #ffdf00;
-  /* border: 3px solid  */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +56,11 @@
     -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+.board:hover {
+  border: 6px solid #203aff;
+}
+
+/* how to format the scored board to me on the right side */
 /* .aside {
   display: flex;
   border: 5px solid black;
