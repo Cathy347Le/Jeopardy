@@ -20,7 +20,7 @@ var triviaCards = [
   {
     question:
       "This is given by parents of the family to their kids on Lunar New Year",
-    answer: "Answer:	What is red envelopes",
+    answer: "Answer: What is red envelopes",
     pointValue: 100
   },
   {
@@ -30,103 +30,103 @@ var triviaCards = [
     pointValue: 100
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Answer: This is the answer",
+    question: "Q6",
+    answer: "Answer: 6",
     pointValue: 200
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q7",
+    answer: "Answer: 7",
     pointValue: 200
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q8",
+    answer: "Answer: 8",
     pointValue: 200
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q9",
+    answer: "Answer: 9",
     pointValue: 200
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q10",
+    answer: "Answer: 10",
     pointValue: 200
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "11",
+    answer: "Answer: 11",
     pointValue: 300
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "12",
+    answer: "Answer: 12",
     pointValue: 300
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "13",
+    answer: "Answer: 13",
     pointValue: 300
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "14",
+    answer: "Answer: 14",
     pointValue: 300
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q15",
+    answer: "Answer: 15",
     pointValue: 300
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q16",
+    answer: "Answer: 16",
     pointValue: 400
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q17",
+    answer: "Answer: 17",
     pointValue: 400
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q18",
+    answer: "Answer: 18",
     pointValue: 400
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q19",
+    answer: "Answer: 19",
     pointValue: 400
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q20",
+    answer: "Answer: 20",
     pointValue: 400
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q21",
+    answer: "Answer: 21",
     pointValue: 500
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q22",
+    answer: "Answer: 22",
     pointValue: 500
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q23",
+    answer: "Answer: 23",
     pointValue: 500
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q24",
+    answer: "Answer: 24",
     pointValue: 500
   },
   {
-    question: "Good morning! Lets make a kick ass project. ",
-    answer: "Good morning! Lets make a kick ass project",
+    question: "Q25",
+    answer: "Answer: 25",
     pointValue: 500
   }
 ];
@@ -168,7 +168,6 @@ console.log(triviaQuestionEl);
 
 for (let i = 0; i < cellsEl.length; i++) {
   cellsEl[i].addEventListener("click", function(evt) {
-    // const triviaQuestionEl = document.querySelector("#trivia-question");
     for (let q = 0; q < questionTextEl.length; q++) {
       if (i === q) {
         triviaQuestionEl.innerHTML = questionTextEl[q];
