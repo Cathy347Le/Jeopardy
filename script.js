@@ -147,14 +147,19 @@ const answerTextEl = triviaCards.map(function(item) {
   return item.answer;
 });
 
+// console.log(answerTextEl);
+
 const pointValueEl = triviaCards.map(function(item) {
   return item.pointValue;
 });
 
 //Capture items in my footer and text to it
 const triviaQuestionEl = document.querySelector("#trivia-question");
-triviaQuestionEl.innerHTML = "I hope this works";
-console.log(triviaQuestionEl);
+// triviaQuestionEl.innerHTML = "I hope this works";
+
+const triviaAnswerEl = document.querySelector("#trivia-answer");
+// triviaAnswerEl.innerHTML = "Answer: I hope this works";
+// console.log(triviaAnswerEl);
 
 // for (let q = 0; q < questionTextEl.length; q++) {
 //   console.log(questionTextEl[q]);
@@ -166,20 +171,67 @@ console.log(triviaQuestionEl);
 //   });
 // }
 
+//Get the correct question text to display when board is clicked
 for (let i = 0; i < cellsEl.length; i++) {
-  cellsEl[i].addEventListener("click", function(evt) {
+  cellsEl[i].addEventListener("click", function() {
     for (let q = 0; q < questionTextEl.length; q++) {
       if (i === q) {
         triviaQuestionEl.innerHTML = questionTextEl[q];
+        for (let a = 0; a < answerTextEl.length; a++) {
+          if (q === a) {
+            answerButtonEl.addEventListener("click", function() {
+              triviaAnswerEl.innerHTML = answerTextEl[a];
+            });
+          }
+        }
       }
     }
   });
 }
 
+//Get the correct question text to display when board is clicked
 // for (let i = 0; i < cellsEl.length; i++) {
-//     cellsEl[i].addEventListener("click", function (evt) {
-//         for (let q = 0; q < questionTextEl.length; q++) {
-//             triviaQuestionEl[q].innerHTML += questionTextEl;
-//         }
-
+//   cellsEl[i].addEventListener("click", function() {
+//     for (let q = 0; q < questionTextEl.length; q++) {
+//       if (i === q) {
+//         triviaQuestionEl.innerHTML = questionTextEl[q];
+//       }
+//     }
+//   });
 // }
+
+// for (let i = 0; i < questionTextEl.length; i++) {
+//   answerButtonEl.addEventListener("click", function() {
+//     for (let a = 0; a < answerTextEl.length; a++) {
+//       if (i === a) {
+//         triviaAnswerEl.innerHTML = answerTextEl[a];
+//       }
+//     }
+//   });
+// }
+
+//Get the correct answer text to display when button is clicked
+// for (let q = 0; q < questionTextEl.length; q++) {
+//   answerButtonEl.addEventListener("click", function() {
+//     for (let a = 0; a < answerTextEl.length; a++) {
+//       if (q === a) {
+//         triviaAnswerEl.innerHTML = answerTextEl[a];
+//       }
+//     }
+//   });
+// }
+
+// answerButtonEl.addEventListener("click", function(e) {
+//     e.preventDefault();
+//     for (let q = 0; q < questionTextEl.length; q++) {
+//             if (i === q) {
+//                 triviaQuestionEl.innerHTML = questionTextEl[q];
+//             }
+//         }
+//     });
+// }
+
+//   for (let q = 0; q < answerTextEl.length; q++) {
+//     triviaAnswerEl.innerHTML = answerTextEl[q];
+//   }
+// });
