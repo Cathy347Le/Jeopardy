@@ -1,0 +1,34 @@
+for (let i = 0; i < cellsEl.length; i++) {
+//   cellsEl[i].addEventListener("click", function() {
+//     for (let q = 0; q < questionTextEl.length; q++) {
+//       if (i === q) {
+//         triviaQuestionEl.innerHTML = questionTextEl[q];
+//         //Displays the correct answer text when board is clicked
+//         for (let a = 0; a < answerTextEl.length; a++) {
+//           if (q === a) {
+//             answerButtonEl.addEventListener("click", function() {
+//               triviaAnswerEl.innerHTML = answerTextEl[a];
+//               //Assign the correct points
+//               for (let c = 0; c < pointValueEl.length; c++) {
+//                 if ((a === c) & (q === c)) {
+//                   correctButtonEl.addEventListener("click", function() {
+//                     score += pointValueEl[c];
+//                     getScore.innerText = score;
+//                 esle {
+//                   continueButtonEl.addEventListener("click", function(){
+//                     triviaQuestionEl.innerHTML = "";
+//                     triviaAnswerEl.innerHTML = "";
+//                     pointValueEl[c] = 0
+//                   });
+//                 }
+//                 });
+//                   }
+//                 }
+//               }
+//             });
+//           }
+//         }
+//       }
+//     }
+//   });
+// }

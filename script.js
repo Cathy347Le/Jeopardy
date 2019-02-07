@@ -161,49 +161,118 @@ const triviaAnswerEl = document.querySelector("#trivia-answer");
 // console.log(triviaAnswerEl);
 
 let score = 0;
-//Displays the correct question text when board is clicked
-for (let i = 0; i < cellsEl.length; i++) {
-  cellsEl[i].addEventListener("click", function() {
-    for (let q = 0; q < questionTextEl.length; q++) {
-      if (i === q) {
-        triviaQuestionEl.innerHTML = questionTextEl[q];
-        //Displays the correct answer text when board is clicked
-        for (let a = 0; a < answerTextEl.length; a++) {
-          if (q === a) {
-            answerButtonEl.addEventListener("click", function() {
-              triviaAnswerEl.innerHTML = answerTextEl[a];
-              for (let c = 0; c < pointValueEl.length; c++) {
-                if ((a === c) & (q === c)) {
-                  //When the correct button is hit, user is rewarded with the pointValue
-                  correctButtonEl.addEventListener("click", function() {
-                    score += pointValueEl[c];
-                    getScore.innerText = score;
-                  });
-                }
-              }
-            });
-          }
+
+const displayQuestion = function() {
+  for (let i = 0; i < cellsEl.length; i++) {
+    cellsEl[i].addEventListener("click", function() {
+      for (let q = 0; q < questionTextEl.length; q++) {
+        if (i === q) {
+          triviaQuestionEl.innerHTML = questionTextEl[q];
         }
       }
-    }
-  });
-}
-
-continueButtonEl.addEventListener("click", function() {
-  if (triviaAnswerEl.innerHTML !== null ){
-    for (let i = 0; i < cellsEl.length; i++) {
+    });
   }
-//capture the text of the div and remove it. 
+};
+displayQuestion();
+
+const displayAnswer = function() {
+  for (let i = 0; i < cellsEl.length; i++) {
+    cellsEl[i].addEventListener("click", function() {
+      for (let a = 0; a < answerTextEl.length; a++) {
+        answerButtonEl.addEventListener("click", function() {
+          if (i === a) {
+            triviaAnswerEl.innerHTML = answerTextEl[a];
+          }
+        });
+      }
+    });
+  }
+};
+
+displayAnswer();
+
+const awardPoints = function() {
+  for (let i = 0; i < cellsEl.length; i++) {
+    cellsEl[i].addEventListener("click", function() {
+      for (let c = 0; c < pointValueEl.length; c++) {
+        correctButtonEl.addEventListener("click", function() {
+          if (i === c) {
+            score += pointValueEl[c];
+            getScore.innerText = score;
+          }
+        });
+      }
+    });
+  }
+};
+
+awardPoints();
 
 
-  triviaQuestionEl.innerHTML = "";
-  triviaAnswerEl.innerHTML = "";
+const 
 
-});
+//         for (let a = 0; a < answerTextEl.length; a++) {
+//           if (q === a) {
+//             answerButtonEl.addEventListener("click", function() {
+//               triviaAnswerEl.innerHTML = answerTextEl[a];
 
-for (let a = 0; a < answerTextEl.length; a++) {
+//Displays the correct question text when board is clicked
+// for (let i = 0; i < cellsEl.length; i++) {
+//   cellsEl[i].addEventListener("click", function() {
+//     for (let q = 0; q < questionTextEl.length; q++) {
+//       if (i === q) {
+//         triviaQuestionEl.innerHTML = questionTextEl[q];
+//         //Displays the correct answer text when board is clicked
+//         for (let a = 0; a < answerTextEl.length; a++) {
+//           if (q === a) {
+//             answerButtonEl.addEventListener("click", function() {
+//               triviaAnswerEl.innerHTML = answerTextEl[a];
+//               //Assign the correct points
+//               for (let c = 0; c < pointValueEl.length; c++) {
+//                 if ((a === c) & (q === c)) {
+//                   correctButtonEl.addEventListener("click", function() {
+//                     score += pointValueEl[c];
+//                     getScore.innerText = score;
+//                 esle {
+//                   continueButtonEl.addEventListener("click", function(){
+//                     triviaQuestionEl.innerHTML = "";
+//                     triviaAnswerEl.innerHTML = "";
+//                     pointValueEl[c] = 0
+//                   });
+//                 }
+//                 });
+//                   }
+//                 }
+//               }
+//             });
+//           }
+//         }
+//       }
+//     }
+//   });
+// }
 
-}
+// continueButtonEl.addEventListener("click", function () {
+//   triviaQuestionEl.innerHTML = "";
+//   triviaAnswerEl.innerHTML = "";
 
-getCellText = cellsEl[i].innerHTML;
-console.log(getCellText);
+// continueButtonEl.addEventListener("click", function() {
+//   triviaQuestionEl.innerHTML = "";
+//   triviaAnswerEl.innerHTML = "";
+// });
+
+// continueButtonEl.addEventListener("click", function() {
+//   if (triviaAnswerEl.innerHTML !== null ){
+//     for (let i = 0; i < cellsEl.length; i++) {
+//   }
+//capture the text of the div and remove it.
+
+//   triviaQuestionEl.innerHTML = "";
+//   triviaAnswerEl.innerHTML = "";
+
+// });
+
+// for (let a = 0; a < answerTextEl.length; a++) {
+
+// getCellText = cellsEl[i].innerHTML;
+// console.log(getCellText);
