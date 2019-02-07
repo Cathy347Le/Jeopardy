@@ -5,68 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Asian Jeopardy</title>
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Alfa+Slab+One"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-        <div class="grid-categories">
-            <div class="cell category">Year of the Pig</div>
-            <div class="cell category">Foods</div>
-            <div class="cell category">Superstitions</div>
-            <div class="cell category">Traditions</div>
-            <div class="cell category">Geography</div>
+    <div class="wrapper">
+      <main class="trivia-game-board">
+        <div class="grid-game-board">
+          <div class="cell-category">Year of the Pig</div>
+          <div class="cell-category">Foods</div>
+          <div class="cell-category">Superstitions</div>
+          <div class="cell-category">Traditions</div>
+          <div class="cell-category">Geography</div>
+          <div class="cell-board">0 $100</div>
+          <div class="cell-board">1 $100</div>
+          <div class="cell-board">2 $100</div>
+          <div class="cell-board">3 $100</div>
+          <div class="cell-board">4 $100</div>
+          <div class="cell-board">5 $200</div>
+          <div class="cell-board">6 $200</div>
+          <div class="cell-board">7 $200</div>
+          <div class="cell-board">8 $200</div>
+          <div class="cell-board">9 $200</div>
+          <div class="cell-board">10 $300</div>
+          <div class="cell-board">11 $300</div>
+          <div class="cell-board">12 $300</div>
+          <div class="cell-board">13 $300</div>
+          <div class="cell-board">14 $300</div>
+          <div class="cell-board">15 $400</div>
+          <div class="cell-board">16 $400</div>
+          <div class="cell-board">17 $400</div>
+          <div class="cell-board">18 $400</div>
+          <div class="cell-board">19 $400</div>
+          <div class="cell-board">$500</div>
+          <div class="cell-board">$500</div>
+          <div class="cell-board">$500</div>
+          <div class="cell-board">$500</div>
+          <div class="cell-board">$500</div>
         </div>
-        <!-- <aside>
-            <div class="scoreboard">00000</h2>
-        </aside> -->
-    </header>
-    <main>
-        <div class="grid-board-game">
-            <div class="cell-board">0 $100</div>
-            <div class="cell-board">1 $100</div>
-            <div class="cell-board">2 $100</div>
-            <div class="cell-board">3 $100</div>
-            <div class="cell-board">4 $100</div>
-            <div class="cell-board">5 $200</div>
-            <div class="cell-board">6 $200</div>
-            <div class="cell-board">7 $200</div>
-            <div class="cell-board">8 $200</div>
-            <div class="cell-board">9 $200</div>
-            <div class="cell-board">10 $300</div>
-            <div class="cell-board">11 $300</div>
-            <div class="cell-board">12 $300</div>
-            <div class="cell-board">13 $300</div>
-            <div class="cell-board">14 $300</div>
-            <div class="cell-board">15 $400</div>
-            <div class="cell-board">16 $400</div>
-            <div class="cell-board">17 $400</div>
-            <div class="cell-board">18 $400</div>
-            <div class="cell-board">19 $400</div>
-            <div class="cell-board">20 $500</div>
-            <div class="cell-board">21 $500</div>
-            <div class="cell-board">22 $500</div>
-            <div class="cell-board">23 $500</div>
-            <div class="cell-board">24 $500</div>
-    </main>
-    <footer>
+      </main>
+      <aside class="aside-right">
+        <h2 class="score">00000</h2>
+      </aside>
+      <aside class="aside-left">
+        <a href="#" class="reset">Reset</a>
+      </aside>
+      <footer class="trivia_question_and_answer">
         <div class="container">
-            <div class="box box1" id="trivia-question"></div>
-            <div class="box box2" id="trivia-answer"></div>
-            <div class="box box3">
-                <a href="#" class="button" id="answer-button">Answer</a>
-            </div>
-            <div class="box box4">
-                <a href="#" class="button" id="correct-button">Correct</a>
-            </div>
-            <div class="box box5">
-                <a href="#" class="button" id="wrong-button">Wrong</a>
-            </div>
-            <div class="box box6">
-                 <a href="#" class="button" id="continue-button">Continue</a>
-            </div>
+          <div class="box box1" id="trivia-question"></div>
+          <div class="box box2" id="trivia-answer"></div>
+          <div class="box box3">
+            <a href="#" class="button" id="answer-button">Answer</a>
+          </div>
+          <div class="box box4">
+            <a href="#" class="button" id="correct-button">Correct</a>
+          </div>
+          <div class="box box5">
+            <a href="#" class="button" id="wrong-button">Wrong</a>
+          </div>
+          <div class="box box6">
+            <a href="#" class="button" id="continue-button">Continue</a>
+          </div>
         </div>
-    </footer>
+      </footer>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>

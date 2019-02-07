@@ -2,46 +2,54 @@
   box-sizing: border-box;
 }
 
-.grid-categories {
+.wrapper {
   display: grid;
-  max-width: 950px;
-  min-height: 4.5rem;
-  margin: 0 auto;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(5, 1fr);
-  text-align: center;
-  background-color: #c02738;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-areas:
+    "reset main score"
+    "reset main score"
+    "footer footer footer";
 }
 
-.category {
+.trivia-game-board {
+  grid-area: main;
+}
+
+.aside-right {
+  grid-area: score;
+}
+
+.aside-left {
+  grid-area: reset;
+}
+
+.trivia_question_and_answer {
+  grid-area: footer;
+}
+
+.grid-game-board {
+  display: grid;
+  grid-template-rows: 0.8fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 550px;
+  background-color: #c02738;
+  text-align: center;
+}
+
+.cell-category {
   border: 5px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 4mm ridge rgb(243, 212, 8);
   font-family: "Alfa Slab One", cursive;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
-}
-/* 
-.aside {
-  display: flex;
-  flex-grow: 1;
-  max-width: 30px;
-  max-height: 30px;
-  margin-left: auto;
-} */
-.grid-board-game {
-  display: grid;
-  max-width: 950px;
-  margin: 0 auto;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  min-height: 480px;
-  background-color: #c02738;
-  text-align: center;
 }
 
 .cell-board {
@@ -56,9 +64,18 @@
     -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.board:hover {
+.cell-board:hover {
   border: 6px solid #203aff;
 }
+
+/* 
+.aside {
+  display: flex;
+  flex-grow: 1;
+  max-width: 30px;
+  max-height: 30px;
+  margin-left: auto;
+} */
 
 /* how to format the scored board to me on the right side */
 /* .aside {
