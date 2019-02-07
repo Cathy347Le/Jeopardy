@@ -1,3 +1,4 @@
+//Bonus: create a class with object instances
 var triviaCards = [
   {
     question:
@@ -133,91 +134,156 @@ var triviaCards = [
 
 // console.log(triviaCards);
 
-//Capturing Elements
-var cellsEl = document.querySelectorAll(".cell-board");
-var answerButtonEl = document.querySelector("#answer-button");
-var correctButtonEl = document.querySelector("#correct-button");
-var continueButtonEl = document.querySelector("#continue-button");
-var getScore = document.querySelector(".score");
+//Capturing HTML Elements
+var cellsHT = document.querySelectorAll(".cell-board");
+var answerButtonHT = document.querySelector("#answer-button");
+var correctButtonHT = document.querySelector("#correct-button");
+var continueButtonHT = document.querySelector("#continue-button");
+var getScoreHT = document.querySelector(".score");
 
-// console.log(cellsEl[1].innerHTML);
-
-//Capture items in my footer and text to it
-const triviaQuestionEl = document.querySelector("#trivia-question");
-// triviaQuestionEl.innerHTML = "I hope this works";
-
-const triviaAnswerEl = document.querySelector("#trivia-answer");
-// triviaAnswerEl.innerHTML = "Answer: I hope this works";
-// console.log(triviaAnswerEl);
+//Capture HTML elements in my footer
+const triviaQuestionHT = document.querySelector("#trivia-question");
+const triviaAnswerHT = document.querySelector("#trivia-answer");
+// triviaQuestionHT.innerHTML = "I hope this works";
+// triviaAnswerHT.innerHTML = "Answer: I hope this works";
 
 let score = 0;
 
-const displayQuestion = function() {
-  for (let i = 0; i < cellsEl.length; i++) {
-    cellsEl[i].addEventListener("click", function() {
-      for (let c = 0; c < triviaCards.length; c++) {
-        if (i === c) {
-          triviaQuestionEl.innerHTML = triviaCards[c].question;
-        }
-      }
+// const displayQuestion = function() {
+//   for (let i = 0; i < cellsEl.length; i++) {
+//     cellsEl[i].addEventListener("click", function() {
+//       for (let c = 0; c < triviaCards.length; c++) {
+//         if (i === c) {
+//           triviaQuestionEl.innerHTML = triviaCards[c].question;
+//         }
+//       }
+//     });
+//   }
+// };
+// displayQuestion();
+
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    let currentCard = triviaCards[evt.target.dataset.index];
+    triviaQuestionHT.innerHTML = currentCard.question;
+  });
+}
+
+// for (let i = 0; i < cellsHT.length; i++) {
+//   cellsHT[i].addEventListener("click", function() {
+//     for (let c = 0; c < triviaCards.length; c++) {
+//       answerButtonHT.addEventListener("click", function() {
+//         if (i === c) {
+//           triviaAnswerHT.innerHTML = triviaCards[c].answer;
+//         }
+//       });
+//     }
+//   });
+// }
+
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    answerButtonHT.addEventListener("click", function() {
+      let currentCard = triviaCards[evt.target.dataset.index];
+      triviaAnswerHT.innerHTML = currentCard.answer;
     });
-  }
-};
-displayQuestion();
+  });
+}
 
-// cells[i].addEventListener('click', function(evt) {
-//   let currentCard = triviaCards[evt.target.dataset.index]
-//   triviaQuestionEl.innerHTML = currentCard.question;
-// })
-
-const displayAnswer = function() {
-  for (let i = 0; i < cellsEl.length; i++) {
-    answerButtonEl.addEventListener("click", function() {
-      for (let c = 0; c < triviaCards.length; c++) {
-        answerButtonEl.addEventListener("click", function() {
-          if (i === c) {
-            triviaAnswerEl.innerHTML = triviaCards[c].answer;
-          }
-        });
-      }
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    correctButtonHT.addEventListener("click", function() {
+      let currentCard = triviaCards[evt.target.dataset.index];
+      score += currentCard.pointValue;
+      getScoreHT.innerText = score;
     });
-  }
-};
+  });
+}
 
-displayAnswer();
-
-const awardPoints = function() {
-  for (let i = 0; i < cellsEl.length; i++) {
-    cellsEl[i].addEventListener("click", function() {
-      for (let c = 0; c < triviaCards.length; c++) {
-        correctButtonEl.addEventListener("click", function() {
-          if (i === c) {
-            score += triviaCards[c].pointValue;
-            getScore.innerText = score;
-          }
-        });
-      }
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    continueButtonHT.addEventListener("click", function() {
+      cellsHT[i].innerHTML = "";
+      triviaQuestionHT.innerHTML = "";
+      triviaAnswerHT.innerHTML = "";
     });
-  }
-};
+    evt.target.style.pointerEvents = "none";
+  });
+}
 
-awardPoints();
+//             score += triviaCards[c].pointValue;
+//             getScore.innerText = score;
 
-const continueGame = function() {
-  for (let i = 0; i < cellsEl.length; i++) {
-    cellsEl[i].addEventListener("click", function(evt) {
-      for (let c = 0; c < triviaCards.length; c++) {
-        continueButtonEl.addEventListener("click", function() {
-          if (i === c) {
-            cellsEl[i].innerHTML = "";
-            triviaQuestionEl.innerHTML = "";
-            triviaAnswerEl.innerHTML = "";
-          }
-          evt.target.style.pointerEvents = "none";
-        });
-      }
-    });
-  }
-};
+// for (let i = 0; i < cellsHT.length; i++) {
+//   answerButtonHT.addEventListener("click", function(evt) {
+//     let currentCard = triviaCards[evt.target.dataset.index];
+//     triviaAnswerHT.innerHTML = currentCard.answer;
+//   });
+// }
 
-continueGame();
+// answerButtonHT.addEventListener("click", function(evt) {
+//   let currentCard = triviaCards[evt.target.dataset.index];
+//   triviaAnswerHT.innerHTML = currentCard.answer;
+// });
+
+// for (let i = 0; i < cellsHT.length; i++) {
+//   answerButtonHT[i].addEventListener("click", function(evt) {
+//     let currentCard = triviaCards[evt.target.dataset.index];
+//     answerButtonHT.innerHTML = currentCard.answer;
+//   });
+// }
+
+// console.log(cellsHT.dataset.index);
+
+// const displayAnswer = function() {
+//   for (let i = 0; i < cellsEl.length; i++) {
+//     answerButtonEl.addEventListener("click", function() {
+//       for (let c = 0; c < triviaCards.length; c++) {
+//         answerButtonEl.addEventListener("click", function() {
+//           if (i === c) {
+//             triviaAnswerEl.innerHTML = triviaCards[c].answer;
+//           }
+//         });
+//       }
+//     });
+//   }
+// };
+
+// displayAnswer();
+
+// const awardPoints = function() {
+//   for (let i = 0; i < cellsEl.length; i++) {
+//     cellsEl[i].addEventListener("click", function() {
+//       for (let c = 0; c < triviaCards.length; c++) {
+//         correctButtonEl.addEventListener("click", function() {
+//           if (i === c) {
+//             score += triviaCards[c].pointValue;
+//             getScore.innerText = score;
+//           }
+//         });
+//       }
+//     });
+//   }
+// };
+
+// awardPoints();
+
+// for (let i = 0; i < cellsHT.length; i++) {
+//   cellsHT[i].addEventListener("click", function(evt) {
+//     for (let c = 0; c < triviaCards.length; c++) {
+//       continueButtonHT.addEventListener("click", function() {
+//         if (i === c) {
+//           cellsHT[i].innerHTML = "";
+//           triviaQuestionHT.innerHTML = "";
+//           triviaAnswerHT.innerHTML = "";
+//         }
+//         evt.target.style.pointerEvents = "none";
+//       });
+//     }
+//   });
+// }
+
+// continueGame();
+
+// let cellblah = document.querySelector("#cell0");
+// cell.dataset.index;
