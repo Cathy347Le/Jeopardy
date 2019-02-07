@@ -91,13 +91,12 @@
   height: 190px;
   margin: 20px auto;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "box1 box1 box1 box1 box3"
     "box1 box1 box1 box1 box4"
-    "box2 box2 box2 box2 box5"
-    "box2 box2 box2 box2 box6";
+    "box2 box2 box2 box2 box5";
 }
 
 .box1 {
@@ -125,11 +124,6 @@
 
 .box5 {
   grid-area: box5;
-  border-right: 1px dashed silver;
-}
-
-.box6 {
-  grid-area: box6;
   border-bottom: 1px dashed silver;
   border-right: 1px dashed silver;
 }
