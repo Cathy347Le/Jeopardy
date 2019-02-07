@@ -216,7 +216,7 @@ awardPoints();
 
 const continueGame = function() {
   for (let i = 0; i < cellsEl.length; i++) {
-    cellsEl[i].addEventListener("click", function() {
+    cellsEl[i].addEventListener("click", function(evt) {
       for (let c = 0; c < triviaCards.length; c++) {
         continueButtonEl.addEventListener("click", function() {
           if (i === c) {
@@ -224,6 +224,7 @@ const continueGame = function() {
             triviaQuestionEl.innerHTML = "";
             triviaAnswerEl.innerHTML = "";
           }
+          evt.target.style.pointerEvents = "none";
         });
       }
     });
@@ -231,89 +232,3 @@ const continueGame = function() {
 };
 
 continueGame();
-
-//   continueButtonEl.addEventListener("click", function() {
-//     for (let i = 0; i < cellsEl.length; i++) {
-//       if (i === a) {
-//         cellsEl[i].innerHTML = "";
-//         triviaQuestionEl.innerHTML = "";
-//         triviaAnswerEl.innerHTML = "";
-//       }
-//     }
-//   });
-// };
-
-// const continueGame = function() {
-//   continueButtonEl.addEventListener("click", function() {
-//     triviaQuestionEl.innerHTML = "";
-//     triviaAnswerEl.innerHTML = "";
-//   });
-// };
-
-// continueGame();
-
-//         for (let a = 0; a < answerTextEl.length; a++) {
-//           if (q === a) {
-//             answerButtonEl.addEventListener("click", function() {
-//               triviaAnswerEl.innerHTML = answerTextEl[a];
-
-//Displays the correct question text when board is clicked
-// for (let i = 0; i < cellsEl.length; i++) {
-//   cellsEl[i].addEventListener("click", function() {
-//     for (let q = 0; q < questionTextEl.length; q++) {
-//       if (i === q) {
-//         triviaQuestionEl.innerHTML = questionTextEl[q];
-//         //Displays the correct answer text when board is clicked
-//         for (let a = 0; a < answerTextEl.length; a++) {
-//           if (q === a) {
-//             answerButtonEl.addEventListener("click", function() {
-//               triviaAnswerEl.innerHTML = answerTextEl[a];
-//               //Assign the correct points
-//               for (let c = 0; c < pointValueEl.length; c++) {
-//                 if ((a === c) & (q === c)) {
-//                   correctButtonEl.addEventListener("click", function() {
-//                     score += pointValueEl[c];
-//                     getScore.innerText = score;
-//                 esle {
-//                   continueButtonEl.addEventListener("click", function(){
-//                     triviaQuestionEl.innerHTML = "";
-//                     triviaAnswerEl.innerHTML = "";
-//                     pointValueEl[c] = 0
-//                   });
-//                 }
-//                 });
-//                   }
-//                 }
-//               }
-//             });
-//           }
-//         }
-//       }
-//     }
-//   });
-// }
-
-// continueButtonEl.addEventListener("click", function () {
-//   triviaQuestionEl.innerHTML = "";
-//   triviaAnswerEl.innerHTML = "";
-
-// continueButtonEl.addEventListener("click", function() {
-//   triviaQuestionEl.innerHTML = "";
-//   triviaAnswerEl.innerHTML = "";
-// });
-
-// continueButtonEl.addEventListener("click", function() {
-//   if (triviaAnswerEl.innerHTML !== null ){
-//     for (let i = 0; i < cellsEl.length; i++) {
-//   }
-//capture the text of the div and remove it.
-
-//   triviaQuestionEl.innerHTML = "";
-//   triviaAnswerEl.innerHTML = "";
-
-// });
-
-// for (let a = 0; a < answerTextEl.length; a++) {
-
-// getCellText = cellsEl[i].innerHTML;
-// console.log(getCellText);
