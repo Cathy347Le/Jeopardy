@@ -139,11 +139,15 @@ var answerButtonEl = document.querySelector("#answer-button");
 var correctButtonEl = document.querySelector("#correct-button");
 var continueButtonEl = document.querySelector("#continue-button");
 var getScore = document.querySelector(".score");
+
+// console.log(cellsEl[1].innerHTML);
+
 //Capturing properties in the trivia card array
 // const questionTextEl = triviaCards.map(function(item) {
 //   return item.question;
 // });
 
+// console.log(getScore);
 // const answerTextEl = triviaCards.map(function(item) {
 //   return item.answer;
 // });
@@ -209,6 +213,35 @@ const awardPoints = function() {
 };
 
 awardPoints();
+
+const continueGame = function() {
+  for (let i = 0; i < cellsEl.length; i++) {
+    cellsEl[i].addEventListener("click", function() {
+      for (let c = 0; c < triviaCards.length; c++) {
+        continueButtonEl.addEventListener("click", function() {
+          if (i === c) {
+            cellsEl[i].innerHTML = "";
+            triviaQuestionEl.innerHTML = "";
+            triviaAnswerEl.innerHTML = "";
+          }
+        });
+      }
+    });
+  }
+};
+
+continueGame();
+
+//   continueButtonEl.addEventListener("click", function() {
+//     for (let i = 0; i < cellsEl.length; i++) {
+//       if (i === a) {
+//         cellsEl[i].innerHTML = "";
+//         triviaQuestionEl.innerHTML = "";
+//         triviaAnswerEl.innerHTML = "";
+//       }
+//     }
+//   });
+// };
 
 // const continueGame = function() {
 //   continueButtonEl.addEventListener("click", function() {
