@@ -131,6 +131,8 @@ var triviaCards = [
   }
 ];
 
+// console.log(triviaCards);
+
 //Capturing Elements
 var cellsEl = document.querySelectorAll(".cell-board");
 var answerButtonEl = document.querySelector("#answer-button");
@@ -138,19 +140,19 @@ var correctButtonEl = document.querySelector("#correct-button");
 var continueButtonEl = document.querySelector("#continue-button");
 var getScore = document.querySelector(".score");
 //Capturing properties in the trivia card array
-const questionTextEl = triviaCards.map(function(item) {
-  return item.question;
-});
+// const questionTextEl = triviaCards.map(function(item) {
+//   return item.question;
+// });
 
-const answerTextEl = triviaCards.map(function(item) {
-  return item.answer;
-});
+// const answerTextEl = triviaCards.map(function(item) {
+//   return item.answer;
+// });
 
 // console.log(answerTextEl);
 
-const pointValueEl = triviaCards.map(function(item) {
-  return item.pointValue;
-});
+// const pointValueEl = triviaCards.map(function(item) {
+//   return item.pointValue;
+// });
 
 //Capture items in my footer and text to it
 const triviaQuestionEl = document.querySelector("#trivia-question");
@@ -165,9 +167,9 @@ let score = 0;
 const displayQuestion = function() {
   for (let i = 0; i < cellsEl.length; i++) {
     cellsEl[i].addEventListener("click", function() {
-      for (let q = 0; q < questionTextEl.length; q++) {
-        if (i === q) {
-          triviaQuestionEl.innerHTML = questionTextEl[q];
+      for (let c = 0; c < triviaCards.length; c++) {
+        if (i === c) {
+          triviaQuestionEl.innerHTML = triviaCards[c].question;
         }
       }
     });
@@ -178,10 +180,10 @@ displayQuestion();
 const displayAnswer = function() {
   for (let i = 0; i < cellsEl.length; i++) {
     cellsEl[i].addEventListener("click", function() {
-      for (let a = 0; a < answerTextEl.length; a++) {
+      for (let c = 0; c < triviaCards.length; c++) {
         answerButtonEl.addEventListener("click", function() {
-          if (i === a) {
-            triviaAnswerEl.innerHTML = answerTextEl[a];
+          if (i === c) {
+            triviaAnswerEl.innerHTML = triviaCards[c].answer;
           }
         });
       }
@@ -194,10 +196,10 @@ displayAnswer();
 const awardPoints = function() {
   for (let i = 0; i < cellsEl.length; i++) {
     cellsEl[i].addEventListener("click", function() {
-      for (let c = 0; c < pointValueEl.length; c++) {
+      for (let c = 0; c < triviaCards.length; c++) {
         correctButtonEl.addEventListener("click", function() {
           if (i === c) {
-            score += pointValueEl[c];
+            score += triviaCards[c].pointValue;
             getScore.innerText = score;
           }
         });
@@ -208,8 +210,14 @@ const awardPoints = function() {
 
 awardPoints();
 
+// const continueGame = function() {
+//   continueButtonEl.addEventListener("click", function() {
+//     triviaQuestionEl.innerHTML = "";
+//     triviaAnswerEl.innerHTML = "";
+//   });
+// };
 
-const 
+// continueGame();
 
 //         for (let a = 0; a < answerTextEl.length; a++) {
 //           if (q === a) {
