@@ -142,22 +142,6 @@ var getScore = document.querySelector(".score");
 
 // console.log(cellsEl[1].innerHTML);
 
-//Capturing properties in the trivia card array
-// const questionTextEl = triviaCards.map(function(item) {
-//   return item.question;
-// });
-
-// console.log(getScore);
-// const answerTextEl = triviaCards.map(function(item) {
-//   return item.answer;
-// });
-
-// console.log(answerTextEl);
-
-// const pointValueEl = triviaCards.map(function(item) {
-//   return item.pointValue;
-// });
-
 //Capture items in my footer and text to it
 const triviaQuestionEl = document.querySelector("#trivia-question");
 // triviaQuestionEl.innerHTML = "I hope this works";
@@ -181,9 +165,14 @@ const displayQuestion = function() {
 };
 displayQuestion();
 
+// cells[i].addEventListener('click', function(evt) {
+//   let currentCard = triviaCards[evt.target.dataset.index]
+//   triviaQuestionEl.innerHTML = currentCard.question;
+// })
+
 const displayAnswer = function() {
   for (let i = 0; i < cellsEl.length; i++) {
-    cellsEl[i].addEventListener("click", function() {
+    answerButtonEl.addEventListener("click", function() {
       for (let c = 0; c < triviaCards.length; c++) {
         answerButtonEl.addEventListener("click", function() {
           if (i === c) {

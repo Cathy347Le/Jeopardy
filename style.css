@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin: 0;
 }
 
 .wrapper {
@@ -27,12 +28,12 @@ body {
 
 .aside-right {
   grid-area: score;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .aside-left {
   grid-area: reset;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .trivia_question_and_answer {
@@ -45,7 +46,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   max-width: 1000px;
   margin: 0 auto;
-  min-height: 550px;
+  min-height: 500px;
   background-color: #c02738;
   text-align: center;
 }
@@ -79,20 +80,36 @@ body {
   border: 6px solid #203aff;
 }
 
-.score,
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: text-bottom;
+  color: black;
+  margin: 470px 0 0 0;
+  /* border: 1px solid pink; */
+  font-size: 20px;
+  font-family: "Alfa Slab One", cursive;
+}
+
 .reset {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   vertical-align: text-bottom;
   color: black;
-  margin: 460px 0 0 0;
-  border: 1px solid pink;
-  font-size: 25px;
+  /* border: 1px solid pink; */
+  font-size: 12px;
+  font-family: "Alfa Slab One", cursive;
+  text-decoration: none;
 }
 
-.reset {
-  text-decoration: none;
+img {
+  width: 60px;
+  height: 60px;
+  margin: 420px 0 0 70px;
 }
 
 /* .reset {
@@ -125,7 +142,7 @@ body {
 
 .container {
   width: 850px;
-  height: 190px;
+  height: 150px;
   margin: 20px auto;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
