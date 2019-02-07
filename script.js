@@ -137,7 +137,8 @@ var answerButtonEl = document.querySelector("#answer-button");
 var correctButtonEl = document.querySelector("#correct-button");
 var wrongButtonEl = document.querySelector("#wrong-button");
 var continueButtonEl = document.querySelector("#continue-button");
-
+var getScore = document.querySelector(".score");
+console.log(getScore);
 //Capturing properties in the trivia card array
 const questionTextEl = triviaCards.map(function(item) {
   return item.question;
@@ -171,6 +172,7 @@ const triviaAnswerEl = document.querySelector("#trivia-answer");
 //   });
 // }
 
+let score = 0;
 //Get the correct question text to display when board is clicked
 for (let i = 0; i < cellsEl.length; i++) {
   cellsEl[i].addEventListener("click", function() {
@@ -181,6 +183,14 @@ for (let i = 0; i < cellsEl.length; i++) {
           if (q === a) {
             answerButtonEl.addEventListener("click", function() {
               triviaAnswerEl.innerHTML = answerTextEl[a];
+              for (let c = 0; c < pointValueEl.length; c++) {
+                if (a === c) {
+                  correctButtonEl.addEventListener("click", function() {
+                    score += pointValueEl[c];
+                    getScore.innerText = score;
+                  });
+                }
+              }
             });
           }
         }
