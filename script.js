@@ -1,4 +1,4 @@
-//Bonus: create a class with object instances
+//Bonus: create a class with object instances instance. Code will be cleaner
 var triviaCards = [
   {
     question:
@@ -151,20 +151,20 @@ var triviaCards = [
   }
 ];
 
-console.log(triviaCards);
+// console.log(triviaCards);
 
-//Capturing HTML Elements
+//Capturing HTML Elements - HT label is for HTML
 var cellsHT = document.querySelectorAll(".cell-board");
+var getPointHT = document.querySelector(".score");
+var resetButtonHT = document.querySelector("img");
+//Capture HTML elements in my footer - HT label is for HTML
+const triviaQuestionHT = document.querySelector("#trivia-question");
+const triviaAnswerHT = document.querySelector("#trivia-answer");
 var answerButtonHT = document.querySelector("#answer-button");
 var correctButtonHT = document.querySelector("#correct-button");
 var continueButtonHT = document.querySelector("#continue-button");
-var getPointHT = document.querySelector(".score");
-var resetButtonHT = document.querySelector("img");
-//Capture HTML elements in my footer
-const triviaQuestionHT = document.querySelector("#trivia-question");
-const triviaAnswerHT = document.querySelector("#trivia-answer");
 
-//Math is even worst
+//Scoring here is even worst
 // let score = 0;
 
 // for (let i = 0; i < cellsHT.length; i++) {
@@ -210,7 +210,7 @@ for (let i = 0; i < cellsHT.length; i++) {
   });
 }
 
-//Award points when correct buttong is clicked
+//Award points when correct button is clicked
 for (let i = 0; i < cellsHT.length; i++) {
   cellsHT[i].addEventListener("click", function(evt) {
     correctButtonHT.addEventListener("click", function() {
@@ -221,7 +221,7 @@ for (let i = 0; i < cellsHT.length; i++) {
   });
 }
 
-//Erases the trivia Q&A card as well as the cell label when continue it clicked
+//Erases the trivia Q&A as well as the cell $$$ value when the continue button is clicked
 for (let i = 0; i < cellsHT.length; i++) {
   cellsHT[i].addEventListener("click", function(evt) {
     continueButtonHT.addEventListener("click", function() {
@@ -233,6 +233,12 @@ for (let i = 0; i < cellsHT.length; i++) {
   });
 }
 
+//My reset button which reload the page, thus starting over
+resetButtonHT.addEventListener("click", function() {
+  location.reload();
+});
+
+//A different way to do the reset button - need to as Zakk/Hammad for help
 // resetButtonHT.addEventListener("click", function(evt) {
 //   evt.preventDefault();
 //   for (let i = 0; i < cellsHT.length; i++) {
@@ -241,10 +247,6 @@ for (let i = 0; i < cellsHT.length; i++) {
 //     return cellsHT[i].innerHTML;
 //   }
 // });
-
-resetButtonHT.addEventListener("click", function() {
-  location.reload();
-});
 
 //Sources
 // Game inspiration from

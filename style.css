@@ -26,11 +26,13 @@ body {
   margin: 10px 0 0 0;
 }
 
+/* Where my scoreboard lives */
 .aside-right {
   grid-area: score;
   /* border: 1px solid black; */
 }
 
+/* Where my reset button lives */
 .aside-left {
   grid-area: reset;
   /* border: 1px solid black; */
@@ -125,6 +127,7 @@ img {
     "box2 box2 box2 box2 box5";
 }
 
+/* This is where my question text will be displayed */
 .box1 {
   grid-area: box1;
   border-top: 1px dashed silver;
@@ -133,6 +136,7 @@ img {
   padding: 0 40px;
 }
 
+/* This is where my answer text will be displayed */
 .box2 {
   grid-area: box2;
   border-bottom: 1px dashed silver;
@@ -141,17 +145,20 @@ img {
   padding: 0 40px 10px 40px;
 }
 
+/* Where my answer button lives */
 .box3 {
   grid-area: box3;
   border-top: 1px dashed silver;
   border-right: 1px dashed silver;
 }
 
+/* Where my correct button lives */
 .box4 {
   grid-area: box4;
   border-right: 1px dashed silver;
 }
 
+/* Where my continue button lives */
 .box5 {
   grid-area: box5;
   border-bottom: 1px dashed silver;
