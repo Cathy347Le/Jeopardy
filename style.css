@@ -129,12 +129,16 @@ img {
   grid-area: box1;
   border-top: 1px dashed silver;
   border-left: 1px dashed silver;
+  text-align: center;
+  padding: 0 40px;
 }
 
 .box2 {
   grid-area: box2;
   border-bottom: 1px dashed silver;
   border-left: 1px dashed silver;
+  text-align: center;
+  padding: 0 40px 10px 40px;
 }
 
 .box3 {
