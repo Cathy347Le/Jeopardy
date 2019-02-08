@@ -112,34 +112,6 @@ img {
   margin: 420px 0 0 70px;
 }
 
-/* .reset {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: text-bottom;
-  color: blue;
-  margin: 460px 0 0 0;
-  border: 1px solid pink;
-} */
-
-/* 
-.aside {
-  display: flex;
-  flex-grow: 1;
-  max-width: 30px;
-  max-height: 30px;
-  margin-left: auto;
-} */
-
-/* how to format the scored board to me on the right side */
-/* .aside {
-  display: flex;
-  border: 5px solid black;
-  max-width: 30px;
-  align-items: right;
-  justify-content: right;
-} */
-
 .container {
   width: 850px;
   height: 150px;
