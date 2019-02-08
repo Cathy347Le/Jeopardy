@@ -171,6 +171,7 @@ var triviaCards = [
 ];
 
 //This was my second way of coding it
+//////////////////////////////////////
 
 let score = 0;
 
@@ -252,3 +253,48 @@ for (let i = 0; i < cellsHT.length; i++) {
 }
 
 //This is why third way with Zakk
+/////////////////////////////////
+
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    let currentCard = triviaCards[evt.target.dataset.index];
+    triviaQuestionHT.innerHTML = currentCard.question;
+  });
+}
+
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    answerButtonHT.addEventListener("click", function() {
+      let currentCard = triviaCards[evt.target.dataset.index];
+      triviaAnswerHT.innerHTML = currentCard.answer;
+    });
+  });
+}
+
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    correctButtonHT.addEventListener("click", function() {
+      let currentCard = triviaCards[evt.target.dataset.index];
+      score += currentCard.pointValue;
+      getScoreHT.innerText = score;
+    });
+  });
+}
+
+for (let i = 0; i < cellsHT.length; i++) {
+  cellsHT[i].addEventListener("click", function(evt) {
+    continueButtonHT.addEventListener("click", function() {
+      cellsHT[i].innerHTML = "";
+      triviaQuestionHT.innerHTML = "";
+      triviaAnswerHT.innerHTML = "";
+    });
+    evt.target.style.pointerEvents = "none";
+  });
+}
+
+
+//Zakk taught me about data-index
+// console.log(cellsHT.dataset.index);
+
+// let cellblah = document.querySelector("#cell0");
+// cell.dataset.index;

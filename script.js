@@ -131,7 +131,6 @@ var triviaCards = [
     pointValue: 500
   }
 ];
-
 // console.log(triviaCards);
 
 //Capturing HTML Elements
@@ -139,29 +138,41 @@ var cellsHT = document.querySelectorAll(".cell-board");
 var answerButtonHT = document.querySelector("#answer-button");
 var correctButtonHT = document.querySelector("#correct-button");
 var continueButtonHT = document.querySelector("#continue-button");
-var getScoreHT = document.querySelector(".score");
+var getPointHT = document.querySelector(".score");
 
 //Capture HTML elements in my footer
 const triviaQuestionHT = document.querySelector("#trivia-question");
 const triviaAnswerHT = document.querySelector("#trivia-answer");
-// triviaQuestionHT.innerHTML = "I hope this works";
-// triviaAnswerHT.innerHTML = "Answer: I hope this works";
 
-let score = 0;
+//Math is even worst
+// let score = 0;
 
-// const displayQuestion = function() {
-//   for (let i = 0; i < cellsEl.length; i++) {
-//     cellsEl[i].addEventListener("click", function() {
-//       for (let c = 0; c < triviaCards.length; c++) {
-//         if (i === c) {
-//           triviaQuestionEl.innerHTML = triviaCards[c].question;
-//         }
-//       }
+// for (let i = 0; i < cellsHT.length; i++) {
+//   cellsHT[i].addEventListener("click", function(evt) {
+//     let currentCard = triviaCards[evt.target.dataset.index];
+//     triviaQuestionHT.innerHTML = currentCard.question;
+//     answerButtonHT.addEventListener("click", function() {
+//       triviaAnswerHT.innerHTML = currentCard.answer;
+//       correctButtonHT.addEventListener("click", function() {
+//         score += currentCard.pointValue;
+//         getScoreHT.innerText = score;
+//         continueButtonHT.addEventListener("click", function() {
+//           cellsHT[i].innerHTML = "";
+//           triviaQuestionHT.innerHTML = "";
+//           triviaAnswerHT.innerHTML = "";
+//         });
+//       });
 //     });
-//   }
-// };
-// displayQuestion();
+//     evt.target.style.pointerEvents = "none";
+//   });
+// }
 
+//This is why third way with Zakk
+/////////////////////////////////
+
+let point = 000;
+
+//Displays the correct question when cell is clicked
 for (let i = 0; i < cellsHT.length; i++) {
   cellsHT[i].addEventListener("click", function(evt) {
     let currentCard = triviaCards[evt.target.dataset.index];
@@ -169,18 +180,7 @@ for (let i = 0; i < cellsHT.length; i++) {
   });
 }
 
-// for (let i = 0; i < cellsHT.length; i++) {
-//   cellsHT[i].addEventListener("click", function() {
-//     for (let c = 0; c < triviaCards.length; c++) {
-//       answerButtonHT.addEventListener("click", function() {
-//         if (i === c) {
-//           triviaAnswerHT.innerHTML = triviaCards[c].answer;
-//         }
-//       });
-//     }
-//   });
-// }
-
+//Displays the correct answer when answer button is clicked
 for (let i = 0; i < cellsHT.length; i++) {
   cellsHT[i].addEventListener("click", function(evt) {
     answerButtonHT.addEventListener("click", function() {
@@ -190,16 +190,18 @@ for (let i = 0; i < cellsHT.length; i++) {
   });
 }
 
+//Award points when correct buttong is clicked
 for (let i = 0; i < cellsHT.length; i++) {
   cellsHT[i].addEventListener("click", function(evt) {
     correctButtonHT.addEventListener("click", function() {
       let currentCard = triviaCards[evt.target.dataset.index];
-      score += currentCard.pointValue;
-      getScoreHT.innerText = score;
+      point += currentCard.pointValue;
+      getPointHT.innerText = point;
     });
   });
 }
 
+//Erases the trivia Q&A card as well as the cell label when continue it clicked
 for (let i = 0; i < cellsHT.length; i++) {
   cellsHT[i].addEventListener("click", function(evt) {
     continueButtonHT.addEventListener("click", function() {
@@ -210,80 +212,3 @@ for (let i = 0; i < cellsHT.length; i++) {
     evt.target.style.pointerEvents = "none";
   });
 }
-
-//             score += triviaCards[c].pointValue;
-//             getScore.innerText = score;
-
-// for (let i = 0; i < cellsHT.length; i++) {
-//   answerButtonHT.addEventListener("click", function(evt) {
-//     let currentCard = triviaCards[evt.target.dataset.index];
-//     triviaAnswerHT.innerHTML = currentCard.answer;
-//   });
-// }
-
-// answerButtonHT.addEventListener("click", function(evt) {
-//   let currentCard = triviaCards[evt.target.dataset.index];
-//   triviaAnswerHT.innerHTML = currentCard.answer;
-// });
-
-// for (let i = 0; i < cellsHT.length; i++) {
-//   answerButtonHT[i].addEventListener("click", function(evt) {
-//     let currentCard = triviaCards[evt.target.dataset.index];
-//     answerButtonHT.innerHTML = currentCard.answer;
-//   });
-// }
-
-// console.log(cellsHT.dataset.index);
-
-// const displayAnswer = function() {
-//   for (let i = 0; i < cellsEl.length; i++) {
-//     answerButtonEl.addEventListener("click", function() {
-//       for (let c = 0; c < triviaCards.length; c++) {
-//         answerButtonEl.addEventListener("click", function() {
-//           if (i === c) {
-//             triviaAnswerEl.innerHTML = triviaCards[c].answer;
-//           }
-//         });
-//       }
-//     });
-//   }
-// };
-
-// displayAnswer();
-
-// const awardPoints = function() {
-//   for (let i = 0; i < cellsEl.length; i++) {
-//     cellsEl[i].addEventListener("click", function() {
-//       for (let c = 0; c < triviaCards.length; c++) {
-//         correctButtonEl.addEventListener("click", function() {
-//           if (i === c) {
-//             score += triviaCards[c].pointValue;
-//             getScore.innerText = score;
-//           }
-//         });
-//       }
-//     });
-//   }
-// };
-
-// awardPoints();
-
-// for (let i = 0; i < cellsHT.length; i++) {
-//   cellsHT[i].addEventListener("click", function(evt) {
-//     for (let c = 0; c < triviaCards.length; c++) {
-//       continueButtonHT.addEventListener("click", function() {
-//         if (i === c) {
-//           cellsHT[i].innerHTML = "";
-//           triviaQuestionHT.innerHTML = "";
-//           triviaAnswerHT.innerHTML = "";
-//         }
-//         evt.target.style.pointerEvents = "none";
-//       });
-//     }
-//   });
-// }
-
-// continueGame();
-
-// let cellblah = document.querySelector("#cell0");
-// cell.dataset.index;
