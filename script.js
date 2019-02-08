@@ -139,7 +139,7 @@ var answerButtonHT = document.querySelector("#answer-button");
 var correctButtonHT = document.querySelector("#correct-button");
 var continueButtonHT = document.querySelector("#continue-button");
 var getPointHT = document.querySelector(".score");
-
+var resetButtonHT = document.querySelector("img");
 //Capture HTML elements in my footer
 const triviaQuestionHT = document.querySelector("#trivia-question");
 const triviaAnswerHT = document.querySelector("#trivia-answer");
@@ -212,3 +212,16 @@ for (let i = 0; i < cellsHT.length; i++) {
     evt.target.style.pointerEvents = "none";
   });
 }
+
+// resetButtonHT.addEventListener("click", function(evt) {
+//   evt.preventDefault();
+//   for (let i = 0; i < cellsHT.length; i++) {
+//     let point = 000;
+//     getPointHT.innerText = point;
+//     return cellsHT[i].innerHTML;
+//   }
+// });
+
+resetButtonHT.addEventListener("click", function() {
+  location.reload();
+});
