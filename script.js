@@ -146,7 +146,7 @@ var triviaCards = [
     question:
       "Asia is home to both Earth's highest point on land, and lowest. Where on Asia is it the highest and lowest point?",
     answer:
-      "ANSWER: Mount Everest between Nepal and China is the highest. The Dead Sea between Israel, Palestine, and Jordon",
+      "ANSWER: Mount Everest between Nepal and China is the highest point. The Dead Sea between Israel, Palestine, and Jordon is the lowest point",
     pointValue: 500
   }
 ];
@@ -164,62 +164,29 @@ var answerButtonHT = document.querySelector("#answer-button");
 var correctButtonHT = document.querySelector("#correct-button");
 var continueButtonHT = document.querySelector("#continue-button");
 
-//Scoring here is even worst
-// let score = 0;
+let point = 0;
+let currentCard;
 
-// for (let i = 0; i < cellsHT.length; i++) {
-//   cellsHT[i].addEventListener("click", function(evt) {
-//     let currentCard = triviaCards[evt.target.dataset.index];
-//     triviaQuestionHT.innerHTML = currentCard.question;
-//     answerButtonHT.addEventListener("click", function() {
-//       triviaAnswerHT.innerHTML = currentCard.answer;
-//       correctButtonHT.addEventListener("click", function() {
-//         score += currentCard.pointValue;
-//         getScoreHT.innerText = score;
-//         continueButtonHT.addEventListener("click", function() {
-//           cellsHT[i].innerHTML = "";
-//           triviaQuestionHT.innerHTML = "";
-//           triviaAnswerHT.innerHTML = "";
-//         });
-//       });
-//     });
-//     evt.target.style.pointerEvents = "none";
-//   });
-// }
-
-//This is why third way with Zakk
-/////////////////////////////////
-
-let point = 000;
-
-//Displays the correct question when cell is clicked
+//Displays the question when cell is clicked
 for (let i = 0; i < cellsHT.length; i++) {
   cellsHT[i].addEventListener("click", function(evt) {
-    let currentCard = triviaCards[evt.target.dataset.index];
+    currentCard = triviaCards[evt.target.dataset.index];
     triviaQuestionHT.innerHTML = currentCard.question;
   });
 }
 
-//Displays the correct answer when answer button is clicked
-for (let i = 0; i < cellsHT.length; i++) {
-  cellsHT[i].addEventListener("click", function(evt) {
-    answerButtonHT.addEventListener("click", function() {
-      let currentCard = triviaCards[evt.target.dataset.index];
-      triviaAnswerHT.innerHTML = currentCard.answer;
-    });
-  });
-}
+//Displays the answer when answer button is clicked
+answerButtonHT.addEventListener("click", function() {
+  if (currentCard) {
+    triviaAnswerHT.innerHTML = currentCard.answer;
+  }
+});
 
 //Award points when correct button is clicked
-for (let i = 0; i < cellsHT.length; i++) {
-  cellsHT[i].addEventListener("click", function(evt) {
-    correctButtonHT.addEventListener("click", function() {
-      let currentCard = triviaCards[evt.target.dataset.index];
-      point += currentCard.pointValue;
-      getPointHT.innerText = point;
-    });
-  });
-}
+correctButtonHT.addEventListener("click", function() {
+  point += currentCard.pointValue;
+  getPointHT.innerText = point;
+});
 
 //Erases the trivia Q&A as well as the cell $$$ value when the continue button is clicked
 for (let i = 0; i < cellsHT.length; i++) {
@@ -228,32 +195,13 @@ for (let i = 0; i < cellsHT.length; i++) {
       cellsHT[i].innerHTML = "";
       triviaQuestionHT.innerHTML = "";
       triviaAnswerHT.innerHTML = "";
+      currentCard = undefined;
     });
     evt.target.style.pointerEvents = "none";
   });
 }
 
-//My reset button which reload the page, thus starting over
+//My reset button which reloads the page, thus starting over
 resetButtonHT.addEventListener("click", function() {
   location.reload();
 });
-
-//A different way to do the reset button - need to as Zakk/Hammad for help
-// resetButtonHT.addEventListener("click", function(evt) {
-//   evt.preventDefault();
-//   for (let i = 0; i < cellsHT.length; i++) {
-//     let point = 000;
-//     getPointHT.innerText = point;
-//     return cellsHT[i].innerHTML;
-//   }
-// });
-
-//Sources
-// Game inspiration from
-// https://jeopardylabs.com/play/chinese-new-year-jeopardy9
-// How to do text shadow
-// https://css-tricks.com/adding-stroke-to-web-text/
-// How to design buttons
-// https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3
-// I used the Dots game to work on my scoreboard
-// Rogers Campbell from WDI 27 help look at my code

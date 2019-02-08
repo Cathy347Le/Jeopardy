@@ -4,7 +4,7 @@
 
 body {
   background-image: url("lunar_new_year_bg.jpg");
-  height: 780px;
+  /* min-height: 500px; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -116,7 +116,7 @@ img {
 
 .container {
   width: 850px;
-  height: 150px;
+  min-height: 150px;
   margin: 20px auto;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;

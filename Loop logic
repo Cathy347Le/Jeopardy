@@ -298,3 +298,27 @@ for (let i = 0; i < cellsHT.length; i++) {
 
 // let cellblah = document.querySelector("#cell0");
 // cell.dataset.index;
+
+//Success Zak fixed my self scoring code. Loops were causing the problem. If you can, avoid loops. THey can be buggy. Looping through the cells makes sense because you want to add an event listener. But that is where the loop stops. 
+
+Easy to follow along if you create a currentCard variable
+//currentCard = triviaCards[evt.target.dataset.index];
+Erases your currentCard - extra precaution
+//currentCard = undefined; 
+
+//A different way to do the reset button - need to ask Zakk/Hammad for help
+//How do I undo a innerHTML=""
+// resetButtonHT.addEventListener("click", function(evt) {
+//   evt.preventDefault();
+//   for (let i = 0; i < cellsHT.length; i++) {
+//     let point = 000;
+//     getPointHT.innerText = point;
+//     return cellsHT[i].innerHTML;
+//   }
+// });
+
+//Zakk taught me about data-index
+// console.log(cellsHT.dataset.index);
+
+// let cellblah = document.querySelector("#cell0");
+// cell.dataset.index;
