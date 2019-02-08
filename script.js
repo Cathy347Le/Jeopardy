@@ -225,3 +225,13 @@ for (let i = 0; i < cellsHT.length; i++) {
 resetButtonHT.addEventListener("click", function() {
   location.reload();
 });
+
+//Sources
+// Game inspiration from
+// https://jeopardylabs.com/play/chinese-new-year-jeopardy9
+// How to do text shadow
+// https://css-tricks.com/adding-stroke-to-web-text/
+// How to design buttons
+// https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3
+// I used the Dots game to work on my scoreboard
+// Rogers Campbell from WDI 27 help look at my code
