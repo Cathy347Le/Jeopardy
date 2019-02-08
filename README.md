@@ -25,7 +25,17 @@ Play the game as soon as it is uploaded on the browser. The steps are:
 7.	Hit the reset if you want to start over. Good luck and chúc mừng năm mới! 
 
 
-Acknowledgments
+#Extra features to add later
+1.	Refactor the triviaCards array as a class with instances of that object may help and also make my code cleaner. 
+2.	Disable certain buttons during the game so participant is forced to follow the steps. Also deactivate the board during the process of answering the trivia. 
+3.	Create a main page with the game’s name Asian Jeopardy. Add a start game button. If possible, add the Jeopardy music to the main page
+4.	Add a timer
+5.	Create a 2 player and 3 player option
+6.	Double bonus: looking into revealing the questions as a modal
+7.	Double bonus: Add a daily double using a modal and some animation 
+
+
+#Acknowledgments
 
 Thank you to my instructor Zakk Fleischmann for helping me complete the project and solving the bug in my self-scoring code. Also thank you to Rogers Campbell from GA WDI 27 for looking through my code and going over the logic with me. 
 
