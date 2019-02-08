@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/* Copy right image Background
+https://pngtree.com/freebackground/chinese-new-year-lantern-background_97694.html */
 body {
   background-image: url("lunar_new_year_bg.jpg");
   min-height: 800px;
@@ -66,6 +68,8 @@ body {
     -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+/* How to do text shadow
+https://css-tricks.com/adding-stroke-to-web-text/ */
 .cell-board {
   border: thick double #ffdf00;
   display: flex;
@@ -108,6 +112,8 @@ body {
   text-decoration: none;
 }
 
+/* copy right image firecracker
+https://www.clipartmax.com/middle/m2i8G6Z5m2b1G6Z5_firecracker-icon-png-chinese-new-year-emoji/ */
 img {
   width: 60px;
   height: 60px;
@@ -171,6 +177,8 @@ img {
   justify-content: center;
 }
 
+/* How to design buttons
+https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3 */
 .button {
   display: inline-block;
   padding: 5px 10px;
@@ -202,3 +210,6 @@ img {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+/* My Game inspiration source
+https://jeopardylabs.com/play/chinese-new-year-jeopardy9 */
