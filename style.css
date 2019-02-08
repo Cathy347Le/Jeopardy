@@ -4,7 +4,7 @@
 
 body {
   background-image: url("lunar_new_year_bg.jpg");
-  /* min-height: 500px; */
+  min-height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -116,7 +116,7 @@ img {
 
 .container {
   width: 850px;
-  min-height: 150px;
+  min-height: 220px;
   margin: 20px auto;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -142,7 +142,7 @@ img {
   border-bottom: 1px dashed silver;
   border-left: 1px dashed silver;
   text-align: center;
-  padding: 0 40px 10px 40px;
+  padding: 0 30px 10px 30px;
 }
 
 /* Where my answer button lives */
