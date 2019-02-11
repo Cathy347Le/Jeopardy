@@ -10,19 +10,19 @@ There are no prerequisites and nothing needs to be installed. You can play the g
 https://cathy347le.github.io/Jeopardy/
 
 #Running the program
-The Jeopardy game is built using HTML, CSS, JavaScript, and DOM manipulation. The code uses event listeners and array methods. A loop is used to add a event listeners to all the Jeopardy cells and it captures the question, answer, and pointValue by accessing the triviaCards array using data attributes.
+The Jeopardy game is built using HTML, CSS, JavaScript, and DOM manipulation. The code uses event listeners and array methods. A loop is used to add a event listeners to all the Jeopardy cells and it captures the question, answer, and pointValue by accessing the triviaCards array.
 
 Play the game as soon as it is uploaded on the browser. The steps are:
 
 1. Click on any Jeopardy cell on the board to reveal the trivia
-2. Similar to the live game on TV – answer the question outloud in the form of “What is/are” “Who is/are”
+2. Similar to the live game on TV – answer the question out loud in the form of a question
 3. Click the answer button to reveal the answer
 4. If you guessed correctly, click on the correct button to be awarded the points. If you didn’t guess wrong, click on the continue button
 5. Regardless if you got the question wrong or right, remember to click on the continue button. This will remove trivia question and answer below and allow you to continue with the game. Hitting the continue button will also remove the money value label on the board so you know that question has been completed.
 6. Repeat the steps above and try to go through all the trivia questions.
 7. Hit the reset if you want to start over. Good luck and chúc mừng năm mới!
 
-#Extra features to add later
+#Features to add later
 
 1. Refactor the triviaCards array as a class with instances of that object may help and also make my code cleaner.
 2. Disable certain buttons during the game so participant is forced to follow the steps. Also deactivate the board during the process of answering the trivia.
