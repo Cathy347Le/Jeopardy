@@ -31,13 +31,11 @@ body {
 /* Where my scoreboard lives */
 .aside-right {
   grid-area: score;
-  /* border: 1px solid black; */
 }
 
 /* Where my reset button lives */
 .aside-left {
   grid-area: reset;
-  /* border: 1px solid black; */
 }
 
 .trivia_question_and_answer {
@@ -94,7 +92,6 @@ https://css-tricks.com/adding-stroke-to-web-text/ */
   vertical-align: text-bottom;
   color: black;
   margin: 470px 0 0 0;
-  /* border: 1px solid pink; */
   font-size: 20px;
   font-family: "Alfa Slab One", cursive;
 }
@@ -106,7 +103,6 @@ https://css-tricks.com/adding-stroke-to-web-text/ */
   text-align: center;
   vertical-align: text-bottom;
   color: black;
-  /* border: 1px solid pink; */
   font-size: 15px;
   font-family: "Alfa Slab One", cursive;
   text-decoration: none;
