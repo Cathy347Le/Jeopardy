@@ -151,12 +151,11 @@ var triviaCards = [
   }
 ];
 
-// console.log(triviaCards);
-
 //Capturing HTML Elements - HT label is for HTML
 var cellsHT = document.querySelectorAll(".cell-board");
 var getPointHT = document.querySelector(".score");
 var resetButtonHT = document.querySelector("img");
+
 //Capture HTML elements in my footer - HT label is for HTML
 const triviaQuestionHT = document.querySelector("#trivia-question");
 const triviaAnswerHT = document.querySelector("#trivia-answer");
