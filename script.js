@@ -8,8 +8,8 @@ var triviaCards = [
   },
   {
     question:
-      "What fruit is considered the smelliest fruit, sometimes known as stinky fruit",
-    answer: "ANSWER: What is durian",
+      "This food represents a long life and is often eaten during birthday parties and other important celebrations. Cutting or biting them represents cutting life short. So lift that bowl and slurp away!",
+    answer: "ANSWER: What are noodles",
     pointValue: 100
   },
   {
@@ -38,8 +38,8 @@ var triviaCards = [
   },
   {
     question:
-      "This fertilized bird egg (usually a duck) is incubated for a period of 14 to 21 days depending on the local culture and then boiled or steamed. This contents are eaten directly from the shell",
-    answer: "ANSWER: What is a balut egg",
+      "What fruit is considered the smelliest fruit, sometimes known as stinky fruit",
+    answer: "ANSWER: What is durian",
     pointValue: 200
   },
   {
@@ -62,14 +62,14 @@ var triviaCards = [
   },
   {
     question:
-      "This pig character's best friend is a bear. Though very small in stature, this character always conquers his fears when his friends are in danger",
+      "This pig like character has a best friend that is a bear. Though very small in stature, this pig character always conquers his fears when his friends are in danger",
     answer: "ANSWER: Who is Piglet",
     pointValue: 300
   },
   {
     question:
-      "What may not be eaten during Lunar New Year, because its white color symbolizes death and misfortune",
-    answer: "ANSWER: What is Tofu",
+      "This fertilized bird egg (usually a duck) is incubated for a period of 14 to 21 days depending on the local culture and then boiled or steamed. This contents are eaten directly from the shell",
+    answer: "ANSWER: What is a balut egg",
     pointValue: 300
   },
   {
@@ -79,8 +79,9 @@ var triviaCards = [
     pointValue: 300
   },
   {
-    question: "Why might someone feel old on the seventh day of the New Year",
-    answer: "ANSWER: The Seventh Day was known as Everybody's Birthday",
+    question:
+      "Last year was year of the Dog. This year is the year of the Pig. What animal will be celebrated next year",
+    answer: "ANSWER: What is a rat",
     pointValue: 300
   },
   {
@@ -96,8 +97,8 @@ var triviaCards = [
   },
   {
     question:
-      "The candy tray arranged in either a circle or octagon is called ______ and has a dazzling array of candy to start the New Year sweetly	",
-    answer: "ANSWER: What is The Tray of Togetherness",
+      "This country is the top rice producing country in the world, at around 43.20 millions of hectares",
+    answer: "ANSWER: What is India",
     pointValue: 400
   },
   {
@@ -114,7 +115,7 @@ var triviaCards = [
   },
   {
     question:
-      "Macao, which is the autonomous region of East Asia is considered the richest country in Asia by GDP per capita. What is the second richest country in Asia. This country only borders with another country.",
+      "Macao, which is the autonomous region of East Asia is considered the richest country in Asia by GDP per capita. What is the second richest country in Asia. This country only borders with one other country.",
     answer: "ANSWER: What is Qatar",
     pointValue: 400
   },
@@ -125,21 +126,21 @@ var triviaCards = [
     pointValue: 500
   },
   {
-    question: "Which seed signifies having many male offspring ",
-    answer: "ANSWER: What are lotus seeds",
+    question:
+      "The color white is associated with death as oppose to black in the Western culture. What may not be eaten during Lunar New Year, because its white color symbolizes death and misfortune",
+    answer: "ANSWER: What is tofu",
     pointValue: 500
   },
   {
     question:
-      "According to legend, how was the order of the 12 animals of the zodiac decided",
-    answer:
-      "ANSWER: What is the animals raced across a river, the first to win headed the cycle",
+      "In Chinese tradition, after a mother delivers a baby she is confined to her home for ______ as her recovery period. During this time mothers are not allowed to shower, wash their hair and drink or eat cold foods. These restrictions are aimed at restoring the body’s balance after childbirth. If the yin and yang are imbalanced, the mother is susceptible to becoming sick. ",
+    answer: "ANSWER: What is one month",
     pointValue: 500
   },
   {
     question:
-      "Last year was year of the Dog. This year is the year of the Dog. What animal are we celebrating next year?",
-    answer: "ANSWER: What is a rat",
+      "In traditional Chinese, people celebrate this on the seventh day of the first lunar month, also known as Human Day",
+    answer: "ANSWER: What is birthday",
     pointValue: 500
   },
   {
