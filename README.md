@@ -1,5 +1,7 @@
-#Asian Jeopardy
+#Lunar New Year Jeopardy
 Project 1: Trivia Game
+
+![image](https://user-images.githubusercontent.com/46338135/56693509-a2059f00-66b2-11e9-8971-863754a3f397.png)
 
 #Introduction:
 My first class project was to build a game and I built Jeopardy, which I call Asian Jeopardy since all the trivia questions are Asian/Lunar New Year theme.
