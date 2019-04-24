@@ -7,7 +7,7 @@ My first class project was to build a game and I built Jeopardy, which I call As
 #Prerequisites and Installing:
 There are no prerequisites and nothing needs to be installed. You can play the game yourself as it is loaded live on my GitHub pages. If you prefer, you can also download all my files to play the game locally – just open the index.html file in the browser.
 
-https://cathy347le.github.io/Jeopardy/
+https://cathy347le.github.io/Lunar-New-Year-Jeopardy/
 
 #Running the program
 The Jeopardy game is built using HTML, CSS, JavaScript, and DOM manipulation. The code uses event listeners and array methods. A loop is used to add a event listeners to all the Jeopardy cells and it captures the question, answer, and pointValue by accessing the triviaCards array.
